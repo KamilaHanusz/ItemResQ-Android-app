@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MapActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_bar">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_nav_bar"
+            android:id="@+id/map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <ImageView
+            android:id="@+id/go_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_arrow_drawable"
+            android:elevation="5dp"/>
+
+        <ImageView
+            android:id="@+id/search_layout"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/search_loupe_drawable"
+            android:elevation="5dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/search_btn"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="23dp"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_to_reports_btn"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/button_template"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:text="Wróć do zgłoszeń"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav_bar"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/bottom_bar_color"
+        app:itemActiveIndicatorStyle="@style/Theme.BottomNavigationView.ActiveIndicator"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/bottom_nav_icon_colors"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

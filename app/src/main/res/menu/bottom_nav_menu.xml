@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title=""
+        android:id="@+id/unchecked_item"/>
+    <item android:title="Map"
+        android:icon="@drawable/icon_map"
+        android:id="@+id/bottom_menu_map"/>
+    <item android:title="Main"
+        android:icon="@drawable/icon_home"
+        android:id="@+id/bottom_menu_main"/>
+    <item android:title="Add report"
+        android:icon="@drawable/icon_add_report"
+        android:id="@+id/bottom_menu_add_report"/>
+    <item android:title="List reports"
+        android:icon="@drawable/icon_reports"
+        android:id="@+id/bottom_menu_list_reports"/>
+</menu>

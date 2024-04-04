@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:layout_margin="15dp"
+    tools:context=".activity.AddReportActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_bar">
+
+        <ImageView
+            android:id="@+id/go_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/back_arrow_drawable"
+            android:elevation="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/top_bar"
+        android:layout_above="@+id/bottom_options">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dodaj zgłoszenie"
+                android:textColor="@color/gray_for_text"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="32sp"
+                android:layout_margin="12dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="15dp"
+                android:visibility="visible"
+                android:background="@drawable/corner2">
+
+                <ImageView
+                    android:id="@+id/add_picture_icon_0"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_add_photo"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_after_pic_added"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/info_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zdjęcia"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/add_picture_icon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="220dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/icon_add_photo"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="13dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image_view_1"
+                                android:layout_width="55dp"
+                                android:layout_marginEnd="6dp"
+                                android:scaleType="centerCrop"
+                                android:layout_height="75dp"/>
+                            <ImageButton
+                                android:id="@+id/closeButton1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_cancel"
+                                android:layout_marginStart="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Close"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image_view_2"
+                                android:layout_width="55dp"
+                                android:scaleType="centerCrop"
+                                android:layout_marginHorizontal="6dp"
+                                android:layout_height="75dp"/>
+                            <ImageButton
+                                android:id="@+id/close_button_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_cancel"
+                                android:layout_marginStart="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Close"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image_view_3"
+                                android:layout_width="55dp"
+                                android:scaleType="centerCrop"
+                                android:layout_marginHorizontal="6dp"
+                                android:layout_height="75dp"/>
+                            <ImageButton
+                                android:id="@+id/close_button_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_cancel"
+                                android:layout_marginStart="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Close"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image_view_4"
+                                android:layout_width="55dp"
+                                android:scaleType="centerCrop"
+                                android:layout_marginHorizontal="6dp"
+                                android:layout_height="75dp"/>
+                            <ImageButton
+                                android:id="@+id/close_button_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_cancel"
+                                android:layout_marginStart="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Close"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/image_view_5"
+                                android:layout_width="55dp"
+                                android:scaleType="centerCrop"
+                                android:layout_marginStart="6dp"
+                                android:layout_height="75dp"/>
+                            <ImageButton
+                                android:id="@+id/close_button_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_cancel"
+                                android:layout_marginStart="40dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Close"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/report_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/purple_out_line"
+                    android:checkedButton="@+id/lost"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/lost"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Zagubione"
+                        android:textColor="@drawable/text_color_selector"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <RadioButton
+                        android:id="@+id/found"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Znalezione"
+                        android:textColor="@drawable/text_color_selector"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/title_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Tytuł"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30"
+                    app:counterTextColor="@color/gray_for_text"
+                    app:helperText="Wymagane *"
+                    app:helperTextTextColor="@color/application_purple">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/title_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_for_text"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="30"
+                        android:minHeight="48dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/description_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Opis"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text"
+                    app:counterTextColor="@color/gray_for_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:textColor="@color/gray_for_text"
+                        android:gravity="top|start"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine|text"
+                        android:maxLength="500"
+                        android:minHeight="48dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:helperText="Wymagane *"
+                    app:helperTextTextColor="@color/application_purple"
+                    android:hint="Kategoria"
+                    app:endIconTint="@color/gray_for_text"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/category_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_for_text"
+                        android:backgroundTint="@color/background_color"
+                        android:inputType="none"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/location_string"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="25dp"
+                            android:text="Lokalizacja:"
+                            android:textColor="@color/gray_for_text"
+                            android:textSize="20dp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/set_location"
+                            android:layout_width="180dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="45dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/button_template"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:text="Ustaw"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/location_info_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gdzie przedmiot był widziany po raz ostatni?"
+                        android:textSize="12dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="12dp"
+                        android:textColor="@color/application_purple"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginHorizontal="20dp"
+                    tools:context=".MapsActivity"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+                <TextView
+                    android:id="@+id/setting_location_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/application_purple"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="12dp"
+                    android:text="* Jeśli nie wskażesz lokalizacji zdarzenia, zostanie ustawiona twoja obecna lokalizacja"/>
+
+                <TextView
+                    android:id="@+id/report_localization_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_for_text"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Data zdarzenia: "
+                        android:textColor="@color/gray_for_text"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/date_picker_btn"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/button_template"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:text="Wybierz" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/setting_date_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/application_purple"
+                    android:layout_marginHorizontal="30dp"
+                    android:textSize="12dp"
+                    android:text="* Jeśli nie wskażesz daty zdarzenia, zostanie ustawiona dzisiejsza data"/>
+
+                <CheckBox
+                    android:id="@+id/reward_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chcę oferować nagrodę dla znalazcy"
+                    android:textColor="@color/gray_for_text"
+                    android:layout_marginStart="15dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reward_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="Opisz nagrodę"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text"
+                    app:helperText="Wymagane *"
+                    app:helperTextTextColor="@color/application_purple"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/reward_input"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_for_text"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:minHeight="48dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phone_number_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Numer telefonu"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="9"
+                    app:helperText="Wymagane *"
+                    app:helperTextTextColor="@color/application_purple"
+                    app:prefixText="+48 "
+                    app:prefixTextColor="@color/gray_for_text"
+                    app:startIconTint="@color/gray_for_text"
+                    app:counterTextColor="@color/gray_for_text"
+                    app:startIconDrawable="@drawable/icon_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_number_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_for_text"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLength="9"
+                        android:minHeight="48dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:hint="Adres e-mail"
+                    android:textColorHint="@color/gray_for_text"
+                    app:boxStrokeColor="@color/gray_for_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_for_text"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="320"
+                        android:minHeight="48dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anuluj"
+            android:textSize="18sp"
+            android:background="@drawable/button_template2"
+            android:layout_marginEnd="3dp"
+            android:textAllCaps="false"
+            android:textColor="@color/application_purple"
+            android:layout_weight="1"
+            android:id="@+id/cancel_button"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opublikuj"
+            android:textSize="18sp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_template"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:id="@+id/submit_button"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

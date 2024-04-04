@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_profile_btn"
+            android:icon="@drawable/icon_profile"
+            android:title="Mój profil"/>
+        <item
+            android:id="@+id/my_reports_btn"
+            android:icon="@drawable/icon_reports"
+            android:title="Moje zgłoszenia"/>
+        <item
+            android:id="@+id/change_password_btn"
+            android:icon="@drawable/icon_lock"
+            android:title="Zmień hasło"/>
+        <item
+            android:id="@+id/log_out_btn"
+            android:icon="@drawable/icon_log_out"
+            android:title="Wyloguj się"/>
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/delete_account_btn"
+                android:icon="@drawable/icon_delete_account"
+                android:title="Usuń konto"/>
+        </menu>
+    </item>
+
+</menu>

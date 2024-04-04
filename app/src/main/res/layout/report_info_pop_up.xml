@@ -1,0 +1,35 @@
+<!-- custom_info_window.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/infoWindowImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_image" />
+
+    <TextView
+        android:id="@+id/infoWindowTitle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/infoWindowCategory"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/infoWindowOccurrenceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Date"/>
+</LinearLayout>

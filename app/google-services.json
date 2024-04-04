@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "996988642120",
+    "project_id": "itemresq",
+    "storage_bucket": "itemresq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996988642120:android:739b809de7a0bc9f6ec97d",
+        "android_client_info": {
+          "package_name": "com.example.itemresq"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQg8fyFHWV03q842M0YCsFJUIG9r4w46w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

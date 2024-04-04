@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".activity.ListAllReportsActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_bar">
+
+        <ImageView
+            android:id="@+id/go_back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/back_arrow_drawable"
+            android:elevation="5dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo"/>
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/option_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+        
+        <RadioButton
+            android:id="@+id/all_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_buttons_template"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:text="Wszystkie"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/radio_buttons_color"/>
+
+        <RadioButton
+            android:id="@+id/lost_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_buttons_template"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:text="Zgubione"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/radio_buttons_color"/>
+
+        <RadioButton
+            android:id="@+id/found_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_buttons_template"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:text="Znalezione"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/radio_buttons_color"/>
+
+        <RadioButton
+            android:id="@+id/my_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_buttons_template"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            android:text="Moje"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/radio_buttons_color"/>
+        
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav_bar"
+        android:layout_below="@+id/option_buttons">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav_bar"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/bottom_bar_color"
+        app:itemActiveIndicatorStyle="@style/Theme.BottomNavigationView.ActiveIndicator"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/bottom_nav_icon_colors"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

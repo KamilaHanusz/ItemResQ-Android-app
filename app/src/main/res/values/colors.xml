@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_color">#FF24D3FE</color>
+    <color name="red">#F43636</color>
+    <color name="gray_for_arrow">#757575</color>
+    <color name="background_color">#fbfbfe</color>
+    <color name="bottom_bar_color">#eae6e9</color>
+    <color name="bottom_bar_icon_background">#e8def8</color>
+    <color name="side_nav_background_color">#f2eef1</color>
+    <color name="application_purple">#5c62ad</color>
+    <color name="gray_for_text">#515151</color>
+</resources>
